@@ -39,7 +39,6 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: {frontmatter: {template: {eq: "BlogPost"}}}
       sort: { order: DESC, fields: [frontmatter___date] }
       ) {
       edges {
@@ -52,7 +51,6 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD.MM.YYYY")
             title
-            fonte
           }
         }
       }

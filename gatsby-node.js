@@ -1,11 +1,6 @@
 const _ = require('lodash')
-const path = require(`path`)
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions
-
-  const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
-
+exports.createPages = async ({ graphql, reporter }) => {
   const result = await graphql(`
     {
       allMarkdownRemark(
@@ -33,15 +28,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: blogPostTemplate,
-      context: {
-        slug: node.fields.slug,
-      },
-    })
-  })
+  return
 }
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
@@ -56,19 +43,3 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
   }
 }
-
-// exports.createSchemaCustomization = ({ actions }) => {
-//   const { createTypes } = actions
-//   const typeDefs = `
-//   type MarkdownRemark implements Node @infer {
-//     frontmatter: MarkdownRemarkFrontmatter!
-//   }
-//   type MarkdownRemarkFrontmatter @infer {
-//     img: String,
-//     date: Date @dateformat(formatString: "DD-MM-YYYY"),
-//     name: String,
-//     arquivo: String,
-//   }
-// `
-//   createTypes(typeDefs)
-// }
