@@ -3,28 +3,42 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from "../components/Layout"
 // import Carousel from "../components/Carousel"
+import loadable from '@loadable/component'
+
+const Draggable = loadable(() => import('react-draggable'))
 
 const IndexPage = ({
   data: {
     site,
     allMarkdownRemark: { edges },
-  },
-  limit = 3
+  }
 }) => {
 
   const Posts = edges.map(edge => edge.node.frontmatter.title)
 
   return (
     <Layout>
-        <Helmet>
-          <title>{site.siteMetadata.title}</title>
-          <meta name="description" content={site.siteMetadata.description} />
-        </Helmet>
-        {/* <Carousel /> */}
-          <div>
-            <h1>index</h1>
-            {Posts}
-          </div>
+      <Helmet>
+        <title>{site.siteMetadata.title}</title>
+        <meta name="description" content={site.siteMetadata.description} />
+      </Helmet>
+      {/* <Carousel /> */}
+      <div>
+        <h1>index</h1>
+        {Posts}
+      </div>
+      <Draggable
+        axis="x"
+        handle=".handle"
+        defaultPosition={{ x: 0, y: 0 }}
+        position={null}
+        grid={[25, 25]}
+        scale={1}>
+        <div>
+          <div className="handle">Drag from here</div>
+          <div>This readme is really dragging on...</div>
+        </div>
+      </Draggable>
     </Layout>
   )
 }
