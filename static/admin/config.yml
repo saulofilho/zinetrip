@@ -1,0 +1,32 @@
+locale: 'pt'
+
+backend:
+  name: git-gateway
+  branch: master
+
+display_url: https://zinetrip.site
+# logo_url: https://zinetrip.site/static/logo.png
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: component
+    label: Component
+    folder: _data/component
+    slug: '{{day}}-{{month}}-{{year}}-{{slug}}'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - {
+          label: Template,
+          name: template,
+          widget: hidden,
+          default: ComponentPost,
+        }
+      - { name: date, label: Data, widget: datetime, dateFormat: "DD.MM.YYYY", required: false }
+      - { name: title, label: Título, widget: string }
+      - { name: img, label: Imagem, widget: image, required: false }
+      - { name: body, label: Body, widget: markdown, required: false }
+      - { name: fonte, label: Fonte, widget: string, required: false }
