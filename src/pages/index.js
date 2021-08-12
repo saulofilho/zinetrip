@@ -22,6 +22,7 @@ const IndexPage = ({
         </Helmet>
         {/* <Carousel /> */}
           <div>
+            <h1>index</h1>
             {Posts}
           </div>
     </Layout>
