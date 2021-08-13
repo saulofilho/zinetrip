@@ -20,6 +20,8 @@ collections:
       preview: false
     fields:
       - { name: date, label: Data, widget: datetime, dateFormat: "DD.MM.YYYY", required: false }
-      - { name: title, label: Título, widget: string }
+      - { name: title, label: Título, widget: string, required: false }
+      - { name: x, label: Posição X, widget: number, required: false }
+      - { name: y, label: Posição Y, widget: number, required: false }
       - { name: img, label: Imagem, widget: image, required: false }
       - { name: body, label: Body, widget: markdown, required: false }

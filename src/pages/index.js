@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from "../components/Layout"
 import Carousel from "../components/Carousel"
-import loadable from '@loadable/component'
+import Instagram from "../components/Instagram"
+// import loadable from '@loadable/component'
+import { Rnd } from "react-rnd";
 
-const Draggable = loadable(() => import('react-draggable'))
+// const Draggable = loadable(() => import('react-draggable'))
 
 const IndexPage = ({
   data: {
@@ -13,7 +15,7 @@ const IndexPage = ({
     allMarkdownRemark: { edges },
   }
 }) => {
-  const Posts = edges.map(edge => edge.node.frontmatter.img)
+  const Posts = edges.map(edge => edge.node.frontmatter)
 
   return (
     <Layout>
@@ -21,13 +23,23 @@ const IndexPage = ({
         <title>{site.siteMetadata.title}</title>
         <meta name="description" content={site.siteMetadata.description} />
       </Helmet>
+      <Instagram />
       <Carousel />
       {Posts.map(item =>
-        <Draggable>
+        <Rnd
+          key={item.img}
+          default={{
+            x: item.x,
+            y: item.y,
+            width: 200,
+            height: 200,
+          }}
+          onMouseDown={(e)=> e.preventDefault()}
+        >
           <div className="react-draggable-item">
-            <img src={item} alt="imgs draggable" />
+            <img src={item.img} alt="imgs draggable" />
           </div>
-        </Draggable>
+        </Rnd>
       )}
       <div className="vimeo">
         <iframe
@@ -65,6 +77,8 @@ export const pageQuery = graphql`
             date(formatString: "DD.MM.YYYY")
             title
             img
+            x
+            y
           }
         }
       }
