@@ -1,5 +1,8 @@
-.slick-dots li button:before {
-  color: var(--blue) !important;
+.carousel-wrapper {
+  height: 100vh !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 .slick-prev,
 .slick-next {
@@ -7,18 +10,11 @@
 }
 .car-items-wrapper {
   width: 920px;
-  height: 350px;
+  height: 600px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 10px;
   cursor: grabbing;
-}
-.car-text {
-  font-family: var(--inria-sans);
-  color: var(--dark-gray);
-  font-size: 0.9rem;
-  text-align: center;
 }
 @media (max-width: 1200px) {
   .car-items-wrapper {
@@ -40,5 +36,10 @@
     width: 100%;
     height: 300px;
     margin: 0;
+  }
+  .carousel-wrapper {
+    height: 100% !important;
+    display: inherit !important;
+    padding-top: 25%;
   }
 }

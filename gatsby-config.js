@@ -22,10 +22,10 @@ module.exports = {
         name: `zinetrip`,
         short_name: `zinetrip`,
         start_url: `/`,
-        background_color: `#0d518c`,
-        theme_color: `#0d518c`,
+        background_color: `#ff33cc`,
+        theme_color: `#ff33cc`,
         display: `minimal-ui`,
-        icon: `static/assets/default.jpg`,
+        icon: `static/assets/smile.gif`,
       }
     },
     'gatsby-plugin-offline',

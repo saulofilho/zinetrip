@@ -3,24 +3,27 @@ import Slider from "react-slick"
 import './Carousel.scss'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import Chapada from '../../static/assets/chapada.jpg'
-import Nobres from '../../static/assets/nobres.jpg'
-import Pantanal from '../../static/assets/pantanal.jpg'
-import Araguaia from '../../static/assets/araguaia.jpg'
-import Barra from '../../static/assets/barra.jpg'
+import Capa from '../../static/assets/Trip-capa.jpg'
+import Pag1 from '../../static/assets/Trip1.jpg'
+import Pag2 from '../../static/assets/Trip2.jpg'
+import Pag3 from '../../static/assets/Trip3.jpg'
+import Pag4 from '../../static/assets/Trip4.jpg'
+import Pag5 from '../../static/assets/Trip5.jpg'
+import Pag6 from '../../static/assets/Trip6.jpg'
+import Pag7 from '../../static/assets/Trip7.jpg'
+import Pag8 from '../../static/assets/Trip8.jpg'
 
 const Carousel = () => {
   const settings = {
     className: "slider variable-width",
     centerMode: true,
     infinite: true,
-    centerPadding: "60px",
     slidesToShow: 1,
-    speed: 500,
     dots: false,
     autoplay: true,
     autoplaySpeed: 4000,
     pauseOnHover: true,
+    speed: 500,
     variableWidth: true,
     responsive: [
       {
@@ -40,66 +43,91 @@ const Carousel = () => {
             <div
               className="car-items-wrapper"
               style={{
-                backgroundImage: `url(${Chapada})`
+                backgroundImage: `url(${Capa})`
               }}
-              alt="foto da chapada dos guimaraes"
+              alt="pages from zine"
             >
             </div>
-            <p className="car-text">
-            Chapada dos Guimarães
-            </p>
           </div>
           <div>
             <div
               className="car-items-wrapper"
               style={{
-                backgroundImage: `url(${Nobres})`
+                backgroundImage: `url(${Pag1})`
               }}
-              alt="foto de Nobres"
+              alt="pages from zine"
             >
             </div>
-            <p className="car-text">
-            Nobres
-            </p>
           </div>
           <div>
             <div
               className="car-items-wrapper"
               style={{
-                backgroundImage: `url(${Araguaia})`
+                backgroundImage: `url(${Pag2})`
               }}
-              alt="foto do Araguaia"
+              alt="pages from zine"
             >
             </div>
-            <p className="car-text">
-            Alto Araguaia
-            </p>
           </div>
           <div>
             <div
               className="car-items-wrapper"
               style={{
-                backgroundImage: `url(${Barra})`
+                backgroundImage: `url(${Pag3})`
               }}
-              alt="foto do Barra"
+              alt="pages from zine"
             >
             </div>
-            <p className="car-text">
-            Barra do Garças
-            </p>
           </div>
           <div>
             <div
               className="car-items-wrapper"
               style={{
-                backgroundImage: `url(${Pantanal})`
+                backgroundImage: `url(${Pag4})`
               }}
-              alt="foto do Pantanal"
+              alt="pages from zine"
             >
             </div>
-            <p className="car-text">
-            Pantanal
-            </p>
+          </div>
+          <div>
+            <div
+              className="car-items-wrapper"
+              style={{
+                backgroundImage: `url(${Pag5})`
+              }}
+              alt="pages from zine"
+            >
+            </div>
+          </div>
+          <div>
+            <div
+              className="car-items-wrapper"
+              style={{
+                backgroundImage: `url(${Pag6})`
+              }}
+              alt="pages from zine"
+            >
+            </div>
+          </div>
+          <div>
+            <div
+              className="car-items-wrapper"
+              style={{
+                backgroundImage: `url(${Pag7})`
+              }}
+              alt="pages from zine"
+            >
+            </div>
+          </div>
+          <div>
+            <div
+              className="car-items-wrapper"
+              style={{
+                backgroundImage: `url(${Pag8})`
+              }}
+              alt="pages from zine"
+            >
+            </div>
           </div>
         </Slider>
     </section>

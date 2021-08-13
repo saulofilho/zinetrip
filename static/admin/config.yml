@@ -2,10 +2,10 @@ locale: 'pt'
 
 backend:
   name: git-gateway
-  branch: master
+  branch: main
 
 display_url: https://zinetrip.site
-# logo_url: https://zinetrip.site/static/logo.png
+logo_url: https://zinetrip.site/static/smile.gif
 
 media_folder: static/assets
 public_folder: /assets

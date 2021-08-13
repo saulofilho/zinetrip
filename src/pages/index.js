@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from "../components/Layout"
-// import Carousel from "../components/Carousel"
+import Carousel from "../components/Carousel"
 import loadable from '@loadable/component'
 
 const Draggable = loadable(() => import('react-draggable'))
@@ -22,21 +22,10 @@ const IndexPage = ({
         <title>{site.siteMetadata.title}</title>
         <meta name="description" content={site.siteMetadata.description} />
       </Helmet>
-      {/* <Carousel /> */}
-      <div>
-        <h1>index</h1>
-        {Posts}
-      </div>
-      <Draggable
-        axis="x"
-        handle=".handle"
-        defaultPosition={{ x: 0, y: 0 }}
-        position={null}
-        grid={[25, 25]}
-        scale={1}>
-        <div>
-          <div className="handle">Drag from here</div>
-          <div>This readme is really dragging on...</div>
+      <Carousel />
+      <Draggable>
+        <div className="react-draggable-item">
+          {Posts}
         </div>
       </Draggable>
     </Layout>
