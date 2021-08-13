@@ -1,8 +1,5 @@
 .carousel-wrapper {
   height: 100vh !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
 }
 .slick-prev,
 .slick-next {
@@ -10,7 +7,7 @@
 }
 .car-items-wrapper {
   width: 920px;
-  height: 600px;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
