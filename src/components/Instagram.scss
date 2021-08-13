@@ -1,0 +1,15 @@
+.instagram-wrapper {
+  width: 100%;
+  padding: 15px 0 0;
+  text-align: center;
+
+  a {
+    color: var(--pink);
+    font-family: var(--inria-sans);
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  a:hover {
+    color: #000;
+  }
+}

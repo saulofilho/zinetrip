@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from "../components/Layout"
@@ -46,7 +46,8 @@ const IndexPage = ({
           src="https://player.vimeo.com/video/397870522?title=0&byline=0&portrait=0"
           frameBorder="0"
           allow="autoplay; fullscreen"
-          allowFullScreen width="100%"
+          allowFullScreen
+          width="100%"
           height="600px"
         ></iframe>
       </div>
