@@ -5,7 +5,7 @@ const Instagram = () => {
 
   return (
     <section className="instagram-wrapper">
-      <a href="https://www.instagram.com/zinetrip/">Instagram</a>
+      <a href="https://www.instagram.com/zinetrip/">☻INSTAGRAM☻</a>
     </section>
   )
 }

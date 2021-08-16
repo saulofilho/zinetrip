@@ -4,10 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from "../components/Layout"
 import Carousel from "../components/Carousel"
 import Instagram from "../components/Instagram"
-// import loadable from '@loadable/component'
 import { Rnd } from "react-rnd";
-
-// const Draggable = loadable(() => import('react-draggable'))
 
 const IndexPage = ({
   data: {
@@ -23,7 +20,6 @@ const IndexPage = ({
         <title>{site.siteMetadata.title}</title>
         <meta name="description" content={site.siteMetadata.description} />
       </Helmet>
-      <Instagram />
       <Carousel />
       {Posts.map(item =>
         <Rnd
@@ -51,6 +47,7 @@ const IndexPage = ({
           height="600px"
         ></iframe>
       </div>
+      <Instagram />
     </Layout>
   )
 }
