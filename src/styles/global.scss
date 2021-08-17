@@ -19,6 +19,10 @@ body {
   background-repeat: space;
   background-size: 50px;
   position: relative;
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
 }
 * {
   margin: 0;

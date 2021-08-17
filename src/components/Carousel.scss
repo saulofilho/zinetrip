@@ -6,12 +6,11 @@
   display: none !important;
 }
 .car-items-wrapper {
-  width: 920px;
+  width: 1000px;
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  cursor: grabbing;
+  background-size: contain;
   margin: 20px;
 }
 @media (max-width: 1200px) {
