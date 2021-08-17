@@ -5,7 +5,7 @@ backend:
   branch: main
 
 display_url: https://zinetrip.site
-logo_url: https://zinetrip.site/static/smile.gif
+logo_url: https://zinetrip.site/static/Trip---paginas.png
 
 media_folder: static/assets
 public_folder: /assets

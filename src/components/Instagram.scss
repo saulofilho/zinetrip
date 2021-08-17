@@ -8,8 +8,8 @@
     font-family: var(--inria-sans);
     font-size: 20px;
     font-weight: bolder;
-  }
-  a:hover {
-    color: rgb(133, 255, 164);
+    background: rgb(133, 255, 164);
+    box-shadow: 3px 3px var(--pink);
+    transform: translateY(4px);
   }
 }
