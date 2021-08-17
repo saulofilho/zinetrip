@@ -39,6 +39,7 @@ const IndexPage = ({
       )}
       <div className="vimeo">
         <iframe
+          title="zinetrip"
           src="https://player.vimeo.com/video/397870522?title=0&byline=0&portrait=0"
           frameBorder="0"
           allow="autoplay; fullscreen"
