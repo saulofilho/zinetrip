@@ -106,4 +106,8 @@ button {
       width: 150px !important;
     }
   }
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 }
