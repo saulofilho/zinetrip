@@ -20,7 +20,7 @@ module.exports = {
         background_color: `#ff33cc`,
         theme_color: `#ff33cc`,
         display: `minimal-ui`,
-        icon: `static/assets/Trip---paginas.png`,
+        icon: `https://zinetrip.site/assets/Trip---paginas.png`,
       }
     },
     'gatsby-plugin-offline',
