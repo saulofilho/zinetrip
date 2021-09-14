@@ -1,12 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `zinetrip`,
-    description: `zinetrip about`,
     siteUrl: `https://zinetrip.site`,
-    home: {
-      title: `zinetrip`,
-      description: `zinetrip about`,
-    }
   },
   plugins: [
     {
@@ -25,7 +20,7 @@ module.exports = {
         background_color: `#ff33cc`,
         theme_color: `#ff33cc`,
         display: `minimal-ui`,
-        icon: `static/assets/Trip---paginas.png`,
+        icon: `assets/Trip---paginas.png`,
       }
     },
     'gatsby-plugin-offline',

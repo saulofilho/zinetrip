@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react'
+import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Meta from './Meta'
 import 'prismjs/themes/prism-okaidia.css'
 
-export default ({ children, meta }) => {
+export default ({ children, meta, title }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -22,6 +23,13 @@ export default ({ children, meta }) => {
 
         return (
           <Fragment>
+            <Helmet
+              defaultTitle={siteTitle}
+              titleTemplate={`%s | ${siteTitle}`}
+            >
+              {title}
+            </Helmet>
+
             <Meta
               absoluteImageUrl={
                 socialMediaCard &&

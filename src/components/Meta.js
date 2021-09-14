@@ -21,7 +21,7 @@ export default class Meta extends Component {
       title,
       url,
       description,
-      absoluteImageUrl = '',
+      absoluteImageUrl = 'https://zinetrip.site/assets/Trip---Paginas.png',
       twitterSiteAccount,
       twitterCreatorAccount,
       noindex,

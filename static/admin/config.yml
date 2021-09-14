@@ -5,7 +5,7 @@ backend:
   branch: main
 
 display_url: https://zinetrip.site
-logo_url: https://zinetrip.site/static/Trip---paginas.png
+logo_url: https://zinetrip.site/assets/weed.gif
 
 media_folder: static/assets
 public_folder: /assets
@@ -31,12 +31,11 @@ collections:
     editor:
       preview: false
     files:
-      - file: '_data/component/settings/global.yml'
+      - file: '_data/settings/global.yml'
         label: 'Global Settings'
         name: 'global-settings'
         fields:
           - { label: Site Title, name: siteTitle, widget: string }
-          - { label: Site Url, name: siteUrl, widget: string, required: false }
           - {
               label: Site Description,
               name: siteDescription,

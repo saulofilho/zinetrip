@@ -12,7 +12,7 @@ const IndexPage = ({
     allMarkdownRemark: { edges },
   }
 }) => {
-  const Posts = edges.map(edge => edge.node.frontmatter)
+  const posts = edges.map(edge => edge.node.frontmatter)
 
   return (
     <Layout>
@@ -21,7 +21,8 @@ const IndexPage = ({
         <meta name="description" content={site.siteMetadata.description} />
       </Helmet>
       <Carousel />
-      {Posts.map(item =>
+      {posts.map(item =>
+        (item.img !== null ?
         <Rnd
           key={item.img}
           default={{
@@ -30,12 +31,12 @@ const IndexPage = ({
             width: 200,
             height: 200,
           }}
-          onMouseDown={(e)=> e.preventDefault()}
+          onMouseDown={(e) => e.preventDefault()}
         >
           <div className="react-draggable-item">
             <img src={item.img} alt="imgs draggable" />
           </div>
-        </Rnd>
+        </Rnd> : null)
       )}
       <div className="vimeo">
         <iframe
