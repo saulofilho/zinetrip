@@ -45,7 +45,7 @@ $ yarn install
 $ yarn start
 ```
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9acc01a5-1983-45f6-a705-10adc0ebc803/deploy-status)](https://app.netlify.com/sites/fecmt/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/40fcdf7c-8f8c-4640-8021-d0377c743e3a/deploy-status)](https://app.netlify.com/sites/zinetrip/deploys)
 
 [nodejs]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/
